@@ -1,2 +1,2 @@
 #!/bin/bash
-uniq list | file . | wc -w
+sort list | uniq -u
