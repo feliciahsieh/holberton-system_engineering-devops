@@ -1,0 +1,2 @@
+#!/bin/bash
+cut -b1 "An Acrostic" | tr '\n '  ' ' > a.out |cat a.out | tr -d "[:space:]"
