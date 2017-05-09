@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -n $1 | grep "$ODDRE" | cut -b 8-
+perl -n -e '$.%2!=0&&print'  
