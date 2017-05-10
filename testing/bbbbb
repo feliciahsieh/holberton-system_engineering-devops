@@ -1,0 +1,11 @@
+total 32
+drwxr-xr-x 5 vagrant vagrant 4096 May  5 22:55 .
+drwxrwxr-x 3 vagrant vagrant 4096 May  5 22:16 ..
+drwxrwxrwx 2 vagrant vagrant 4096 May  5 22:08 aaa
+-rw-rw-r-- 1 vagrant vagrant    0 May  5 22:01 aasd.c
+-rw-rw-r-- 1 vagrant vagrant  123 May  5 22:54 a.out
+drwxrwxrwx 2 vagrant vagrant 4096 May  5 22:08 bbb
+-rw-rw-r-- 1 vagrant vagrant    0 May  5 22:55 bbbbb
+drwxrwxrwx 2 vagrant vagrant 4096 May  5 22:08 ccc
+-rw-rw-r-- 1 vagrant vagrant   64 May  5 21:48 output.log
+-rw-rw-r-- 1 vagrant vagrant   65 May  5 21:54 tt

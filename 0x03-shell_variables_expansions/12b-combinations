@@ -1,0 +1,2 @@
+#!/bin/bash
+for l in {a..z}{a..z}; do if $l -ne 'oo' then echo $l ; done | grep -v oo
