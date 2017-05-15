@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%d\n" $(("$water"'#'$WATER + "$stir"'#'$STIR))
+printf "%o\n" $(($(echo $WATER | tr water 01234) + $(echo $STIR | tr stir. 01234) ))
