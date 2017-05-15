@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -n -e '$.%2!=0&&print'  
+perl -ne '$.%2 != 0 && print'
