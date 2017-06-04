@@ -1,2 +1,0 @@
-#!/bin/bash
-echo -e "`tail -n 1 tt`" >> tt

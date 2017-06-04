@@ -1,1 +1,0 @@
-chmod 755 $(find /path/to/base/dir -type d)
