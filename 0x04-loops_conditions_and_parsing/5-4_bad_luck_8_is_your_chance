@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script displays "bad luck" on 4th loop, "good luck" on 8th loop,
+# and "Holberton School" other times in 10 total iterations
+i=1;
+while [ $i -le 10 ];
+do
+    if [ $i -eq 4 ];
+    then
+	echo "bad luck";
+    elif [ $i -eq 8 ];
+    then
+	echo "good luck";
+    else
+	echo "Holberton School";
+    fi
+    (( i++ ))
+done
