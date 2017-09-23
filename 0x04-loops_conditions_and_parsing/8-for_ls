@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script lists the current directory where
-# the name after the first dash is displayed
-for i in *;
-do
-    echo "$i" | cut -d"-" -f1 --complement
+# the filename after the first dash is displayed
+DIR="$(ls -1)"
+for i in $DIR; do
+    echo "$i" | cut -d- -f2
 done
