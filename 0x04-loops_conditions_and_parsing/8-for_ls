@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script lists the current directory where
+# the name after the first dash is displayed
+for i in *;
+do
+    echo "$i" | cut -d"-" -f1 --complement
+done
