@@ -3,5 +3,7 @@
 # the name after the first dash is displayed
 for i in *;
 do
-    echo "$i" | cut -d"-" -f1 --complement
+    echo "$i" | cut -s -d'-' -f 1 --complement
+    #echo "$i" | cut -d"-" -f1 --complement
+    #echo "$i" | awk -F'[-]' '{print $2}'
 done
