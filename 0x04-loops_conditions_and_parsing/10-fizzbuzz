@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#FizzBuzz function in bash
+for n in {1..100}; do
+    if ! ((n % 15)); then
+	echo "FizzBuzz";
+    elif ! ((n % 5)); then
+	echo "Buzz";
+    elif ! ((n % 3)); then
+	echo "Fizz";
+    else
+	echo "$n";
+    fi
+done
