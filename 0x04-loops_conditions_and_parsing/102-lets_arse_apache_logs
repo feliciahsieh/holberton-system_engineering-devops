@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Parse Apache log access file, apache-access.log, and print "IP HTTP_CODE"
+# in a list format using awk
+
+input="apache-access.log"
+awk '{print $1, $9}' $input         # ip address (%h)
+#awk '{print $2}' $input         # RFC 1413 identity (%l)
+#awk '{print $3}' $input         # userid (%u)
+#awk '{print $4,5}' $input       # date/time (%t)
+#awk '{print $9}' $input         # status code (%>s)
+#awk '{print $10}' $input        # size (%b)
