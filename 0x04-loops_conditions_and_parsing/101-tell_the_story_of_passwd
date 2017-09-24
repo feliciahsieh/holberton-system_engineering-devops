@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Using the /etc/passwd file, create a story with the format:
+# The user USERNAME is part of the GROUP_ID gang, lives in HOME_DIRECTORY and
+# rides COMMAND/SHELL. USER ID's place is protected by the passcode PASSWORD,
+# more info about the user here: USER ID INFO
+input="/etc/passwd"
+grep -w "$1" $input | while IFS=':' read U P USRID GID D HOMED SHL
+do
+    echo -e "The user $U is part of the $GID gang, lives in $HOMED and rides $SHL. $USRID's place is protected by the passcode $P, more info about the user here: $D"
+done
