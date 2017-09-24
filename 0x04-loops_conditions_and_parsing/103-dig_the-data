@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Parse Apache log access file, apache-access.log, and print
+# "OCCURRENCE_NUMBER IP HTTP_CODE"
+# in a list format using awk
+
+input="apache-access.log"
+awk < $input '{print $1, $9}' | sort | uniq -c | sort -gr
