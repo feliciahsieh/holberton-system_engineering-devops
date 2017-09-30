@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <sys/types.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * infinite_while - infinite running function
@@ -21,26 +22,22 @@ int infinite_while(void)
  *
  * Return: None
  */
-int main(void)
+int main ()
 {
 	pid_t child_pid;
 	int i;
 
 	for (i = 0; i < 5; i++)
 	{
-		child_pid = fork();
-
+		child_pid = fork ();
 		if (child_pid > 0)
 		{
 			printf("Zombie process created, PID: %d\n", child_pid);
-			infinite_while();
 		}
-		else if (child_pid == 0)
-		{
-			/* child */
+		else {
 			exit(0);
 		}
 	}
-
+	infinite_while();
 	return 0;
 }
