@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Install nginx server and change index.html page to show text, Holberton School
+sudo apt-get update
+sudo apt-get -y install Nginx
+sudo /etc/init.d/nginx start
+cat "Holberton School" > /usr/share/nginx/html/index.html
