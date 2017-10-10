@@ -1,3 +1,59 @@
-#!/usr/bin/env bash
-# Connect to a server in Vagrant without password prompt
-config.ssh.shell = 'ssh -v ubuntu@142.44.167.237 -i ~/.ssh/holberton_key -o "NumberOfPasswordPrompts 0"'
+OpenSSH_6.6.1, OpenSSL 1.0.1f 6 Jan 2014
+debug1: Reading configuration data /home/vagrant/.ssh/config
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: Applying options for *
+debug1: Connecting to 142.44.167.237 [142.44.167.237] port 22.
+debug1: Connection established.
+debug1: identity file /home/vagrant/.ssh/holberton_key type 1
+debug1: identity file /home/vagrant/.ssh/holberton_key-cert type -1
+debug1: Enabling compatibility mode for protocol 2.0
+debug1: Local version string SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.8
+debug1: Remote protocol version 2.0, remote software version OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.8
+debug1: match: OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.8 pat OpenSSH_6.6.1* compat 0x04000000
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: server->client aes128-ctr hmac-md5-etm@openssh.com none
+debug1: kex: client->server aes128-ctr hmac-md5-etm@openssh.com none
+debug1: sending SSH2_MSG_KEX_ECDH_INIT
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ECDSA 90:11:d4:07:93:3c:aa:45:da:c9:72:46:bb:47:5a:b8
+debug1: Host '142.44.167.237' is known and matches the ECDSA host key.
+debug1: Found key in /home/vagrant/.ssh/known_hosts:1
+debug1: ssh_ecdsa_verify: signature correct
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: SSH2_MSG_SERVICE_REQUEST sent
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering RSA public key: /home/vagrant/.ssh/holberton_key
+debug1: Server accepts key: pkalg ssh-rsa blen 279
+debug1: key_parse_private2: missing begin marker
+debug1: read PEM private key done: type RSA
+debug1: Authentication succeeded (publickey).
+Authenticated to 142.44.167.237 ([142.44.167.237]:22).
+debug1: channel 0: new [client-session]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: Sending environment.
+debug1: Sending env LANG = en_US.UTF-8
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-125-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Mon Oct  9 23:14:28 UTC 2017
+
+  System load:  0.0              Processes:           71
+  Usage of /:   9.2% of 9.81GB   Users logged in:     0
+  Memory usage: 4%               IP address for eth0: 142.44.167.237
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+33 packages can be updated.
+21 updates are security updates.
