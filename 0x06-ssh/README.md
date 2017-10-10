@@ -36,6 +36,10 @@ Share your SSH client configuration in your answer file.</p><p>Requirements:</p>
 <li>Your SSH client configuration must be configured to refuse to authenticate using a password</li>
 </ul><p>Example:</p>
 
+<p>https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/</p>
+<p>Change to PasswordAuthentication no </p>
+<p>Change to IdentityFile ~/.ssh/holberton_key</p>
+<p>Create empty ~/.ssh/config file</p>
 
 <h4 class="task">
     3. Let me in!
