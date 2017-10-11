@@ -4,9 +4,9 @@ sudo apt-get update
 sudo apt-get -y install Nginx
 sudo service nginx start
 
-orig = "location / { try_files $uri $uri/ =404; }"
-new = "location /redirect_me { return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; }"
-sed -i 's/orig/new' /etc/nginx/sites-available/default
+orig="location / { try_files $uri $uri/ =404; }"
+new="location /redirect_me { return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; }"
+sed -i "s/$orig/$new" /etc/nginx/sites-available/default
 
 sudo service nginx stop
 sudo service nginx start
