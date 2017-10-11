@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install nginx server and change index.html page to show text, Holberton School
+# Install nginx server and change indexhtml page to show text Holberton School
 
 apt-get update
 apt-get -y install nginx
