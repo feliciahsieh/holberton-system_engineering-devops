@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Install apache server and print text
-
 apt-get update
 apt-get -y install apache2
 service apache2 start
