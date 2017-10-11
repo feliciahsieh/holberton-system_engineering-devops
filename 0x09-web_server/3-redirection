@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Install nginx server and change index.html page to show text, Holberton School
+
 apt-get update
 apt-get -y install nginx
 orig="location / {\n\ttry_files $uri $uri/ =404;\n}"
