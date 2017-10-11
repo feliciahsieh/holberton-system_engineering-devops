@@ -5,6 +5,6 @@ apt-get update
 apt-get -y install nginx
 old="location / {\n\ttry_files $uri $uri/ =404;\n}"
 new="location / {\n\ttry_files $uri $uri/ =404;\n}\n\nlocation /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
-sed -i "s/$old/$new/" /etc/nginx/sites-enabled/default
+sed -i "s/$old/$new/" /etc/nginx/sites-available/default
 service nginx stop
 service nginx start
