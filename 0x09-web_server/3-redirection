@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install nginx server and change indexhtml page to show text Holberton School
+# Redict an endpoint to another page
 
 apt-get update
 apt-get -y install nginx
