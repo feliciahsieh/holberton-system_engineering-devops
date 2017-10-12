@@ -3,4 +3,4 @@
 apt-get update
 apt-get -y install apache2
 sudo service apache2 restart
-echo "Hello Holberton" > /var/www/html/index.html
+echo "Hello Holberton apache2 is running" > /var/www/html/index.html
