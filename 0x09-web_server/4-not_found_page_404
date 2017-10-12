@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 # Create custom 404 page with string, Ceci n'est pas une page.
 
+#!/usr/bin/env bash
+# Create custom 404 page with string, Ceci n'est pas une page.
+
 apt-get update
 apt-get -y install nginx
+
+school="Holberton School"
 new="server {
         listen 80 default_server;
         listen [::]:80 default_server ipv6only=on;
@@ -30,7 +35,14 @@ new="server {
                  internal;
         }
 }"
+err404="Ceci n'est pas une page"
 
+#From task 1-install_nginx_web_server
+echo "$school" > /usr/share/nginx/html/index.html
+#From task 3-redirection
 echo "$new" > /etc/nginx/sites-available/default
+#From task 4-not_found_page_404
+echo "$err404" > /usr/share/nginx/html/404.html
+
 service nginx stop
 service nginx start
