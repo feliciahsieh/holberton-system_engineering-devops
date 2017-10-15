@@ -1,10 +1,48 @@
 #!/usr/bin/env bash
 # Create custom 404 page with string, Ceci n'est pas une page.
 
+#!/usr/bin/env bash
+# Create custom 404 page with string, Ceci n'est pas une page.
+
 apt-get update
 apt-get -y install nginx
-old="location / {\n\ttry_files $uri $uri/ =404;\n}"
-new="location / {\n\ttry_files $uri $uri/ =404;\n}\n\nlocation /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
-sed -i "s/$old/$new/" /etc/nginx/sites-available/default
+
+school="Holberton School"
+new="server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        # Make site accessible from http://localhost/
+        server_name localhost;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                # try_files $uri $uri/ =404;
+        }
+
+        location /redirect_me {
+                 return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+        }
+
+        error_page 404 /404.html;
+        #error_page 404 /404.html;
+        location = /404.html {
+                 root /usr/share/nginx/html;
+                 internal;
+        }
+}"
+err404="Ceci n'est pas une page"
+
+#From task 1-install_nginx_web_server
+echo "$school" > /usr/share/nginx/html/index.html
+#From task 3-redirection
+echo "$new" > /etc/nginx/sites-available/default
+#From task 4-not_found_page_404
+echo "$err404" > /usr/share/nginx/html/404.html
+
 service nginx stop
 service nginx start

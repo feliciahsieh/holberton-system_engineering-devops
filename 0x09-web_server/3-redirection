@@ -1,10 +1,29 @@
 #!/usr/bin/env bash
-# Redict an endpoint to another page
+# Redirect an endpoint to another page
 
 apt-get update
 apt-get -y install nginx
-old="location / {\n\ttry_files $uri $uri/ =404;\n}"
-new="location / {\n\ttry_files $uri $uri/ =404;\n}\n\nlocation /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
-sed -i 's/$old/$new/' /etc/nginx/sites-available/default
+new="server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        # Make site accessible from http://localhost/
+        server_name localhost;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                # try_files $uri $uri/ =404;
+        }
+
+        location /redirect_me {
+                 return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+        }
+}"
+
+echo "$new" > /etc/nginx/sites-available/default
 service nginx stop
 service nginx start

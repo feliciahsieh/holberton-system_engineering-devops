@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 # Install apache server and print text
-apt-get update
-apt-get -y install apache2
-sudo service apache2 restart
-echo "Hello Holberton" > /var/www/html/index.html
+sudo service apache2 start
