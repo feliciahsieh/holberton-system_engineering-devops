@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Change localhost to 127.0.0.2 and facebook.com to 8.8.8.8
+sudo cp /etc/hosts ./hosts.new
+sed -i 's/127.*$/127.0.0.2 localhost\n8.8.8.8 facebook.com/' hosts.new
+sudo cp -f ./hosts.new /etc/hosts
+sudo cp /etc/nsswitch.conf ./nsswitch.new
+sed -i 's/hosts:*$/hosts: files dns/' nsswitch.new
+sudo cp -f ./nsswitch.new /etc/nsswitch.conf
