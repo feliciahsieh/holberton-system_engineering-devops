@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# Fix for task 0 in 5 lines without ; &&
