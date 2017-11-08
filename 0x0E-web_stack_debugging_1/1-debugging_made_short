@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
 # Fix for task 0 in 5 lines without ; &&
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+pkill nginx | service nginx restart
+rm /run/nginx.pid

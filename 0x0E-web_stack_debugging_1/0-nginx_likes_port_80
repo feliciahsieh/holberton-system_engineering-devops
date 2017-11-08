@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-# Configure a server to listent to port 80 for IPv4 IPs
+# Configure a server to listen to port 80 for IPv4 IPs
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
