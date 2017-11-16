@@ -1,6 +1,5 @@
 # Puppet file to create a file in /tmp
-file { 'touch /tmp/holberton':
-  ensure  => file,
+file { 'create file /tmp/holberton':
   path    => '/tmp/holberton',
   mode    => '0744',
   owner   => 'www-data',
