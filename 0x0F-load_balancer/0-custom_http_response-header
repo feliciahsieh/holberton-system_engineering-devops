@@ -3,29 +3,6 @@
 
 sudo apt-get update
 sudo apt-get -y install nginx
-new="server {
-        listen 80 default_server;
-        listen [::]:80 default_server ipv6only=on;
-
-        root /usr/share/nginx/html;
-        index index.html index.htm;
-
-        # Make site accessible from http://localhost/
-        # Add hostname to custom HTTP header
-        server_name localhost;
-        add_header X-Served-By $HOSTNAME;
-
-        location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                # try_files $uri $uri/ =404;
-        }
-
-        location /redirect_me {
-                 return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-        }
-}"
-
-sudo echo "$new" > /etc/nginx/sites-available/default
+sudo sed -i 's/server_name localhost;*$/server_name localhost;\n\tadd_header X-Served-By $HOSTNAME;/' /etc/nginx/sites-available/default
 sudo service nginx stop
 sudo service nginx start
