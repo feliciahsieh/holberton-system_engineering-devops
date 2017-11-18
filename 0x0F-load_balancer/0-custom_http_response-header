@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Configure second web server
+# Configure second web server with custom HTTP header
+
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo sed -i "s/server_name localhost;*$/server_name localhost;\n\tadd_header X-Served-By $HOSTNAME;/" /etc/nginx/sites-available/default
-sudo service nginx stop
-sudo service nginx start
+sudo service nginx restart
