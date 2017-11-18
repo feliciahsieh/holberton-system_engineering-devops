@@ -1,10 +1,21 @@
-#!/usr/bin/env bash
-# Install and configure HAproxy on load balancing lb-01 server
+#!/usr/bin/env bash                                                                                                                  
+# Install and configure HAproxy on load balancing lb-01 server                                                                       
 
 sudo apt-get -y install software-properties-common
 sudo add-apt-repository -y ppa:vbernat/haproxy-1.7
 sudo apt-get update
 sudo apt-get -y install haproxy
 
-# sudo sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
-sudo service haproxy start
+echo "ENABLED=1" >> /etc/default/haproxy
+
+sudo mv /etc/haproxy/haproxy.cfg{,.original}
+new="listen appname                                                                                                                  
+    bind 0.0.0.0:80                                                                                                                  
+    mode http                                                                                                                        
+    stats enable                                                                                                                     
+    option httpclose                                                                                                                 
+    option forwardfor                                                                                                                
+    server 214-web-01 142.44.167.237:80 check                                                                                        
+    server 214-web-02 144.217.246.206:80 check"
+echo "$new" > /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
