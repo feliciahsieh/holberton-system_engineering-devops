@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#   Configure firewall
+sudo ufw allow from 142.44.167.237
+sudo ufw allow from 144.217.246.128
+sudo ufw allow from 144.217.246.206
+
+sudo uff disable
+sudo ufw allow ssh/tcp
+sudo ufw allow http/tcp
+sudo ufw allow https/tcp
+
+sudo ufw enable
