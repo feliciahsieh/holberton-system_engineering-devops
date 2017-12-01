@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Configure firewall with port forwarding 8080/tcp to 80/tcp
+sudo uff disable
+
+sudo ufw allow from 142.44.167.237
+sudo ufw allow from 144.217.246.128
+sudo ufw allow from 144.217.246.206
+
+sudo ufw allow ssh/tcp
+sudo ufw allow http/tcp
+sudo ufw allow https/tcp
+
+sudo ufw allow 80/tcp
+*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+COMMIT
+
+sudo ufw enable
