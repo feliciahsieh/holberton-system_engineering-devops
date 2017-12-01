@@ -52,11 +52,3 @@ backend www-backend
    server 214-web-02 144.217.246.206:80 check
 backend letsencrypt-backend
    server letsencrypt 127.0.0.1:54321
-listen appname
-    bind 0.0.0.0:80
-    mode http
-    stats enable
-    option httpclose
-    option forwardfor
-    server 214-web-01 142.44.167.237:80 check
-    server 214-web-02 144.217.246.206:80 check
