@@ -4,11 +4,18 @@ import json
 import sys
 import requests
 
+if len(sys.argv) != 2:
+    exit(1)
+
 empID = sys.argv[1]
 url = 'https://jsonplaceholder.typicode.com/'
 
 url_empID = url + 'users?id=' + str(empID)
 user = requests.get(url_empID)
+
+if (len(user.text) == 2):
+    exit(1)
+
 userJson = user.json()
 empName = userJson[0]["name"]
 
