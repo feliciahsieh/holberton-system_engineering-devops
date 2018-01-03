@@ -21,7 +21,7 @@ if __name__ == "__main__":
         exit(1)
 
     userJson = user.json()
-    empName = userJson["name"]
+    empName = userJson.get("name")
 
     url_TodoCompleted = url + 'todos?userId=' + empID + '&completed=true'
     t = requests.get(url_TodoCompleted)
