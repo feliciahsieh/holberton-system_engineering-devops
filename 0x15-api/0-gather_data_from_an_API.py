@@ -5,8 +5,8 @@ if __name__ == "__main__":
     """ __main__ """
 
     import json
-    import sys
     import requests
+    import sys
 
     if len(sys.argv) != 2:
         exit(1)
