@@ -36,4 +36,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):".format(
         empName, nTodoDone, nTodo))
     for i in range(nTodoDone):
-        print("\t{}".format(tJson[i]["title"]))
+        print("     {}".format(tJson[i]["title"]))
