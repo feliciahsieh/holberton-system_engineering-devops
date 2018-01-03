@@ -23,11 +23,11 @@ if (len(user) == 0):
 
 username = user.get("username")
 
-data = {}
+data = collections.OrderedDict()
 values = []
 
 for todo in todos:
-    t = {}
+    t = collections.OrderedDict()
     t["task"] = todo.get("title")
     t["completed"] = todo.get("completed")
     t["username"] = username
