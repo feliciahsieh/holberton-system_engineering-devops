@@ -14,14 +14,14 @@ if __name__ == "__main__":
     empID = sys.argv[1]
     url = 'https://jsonplaceholder.typicode.com/'
 
-    url_empID = url + 'users?id=' + str(empID)
+    url_empID = url + 'users/' + str(empID)
     user = requests.get(url_empID)
 
     if (len(user.text) == 2):
         exit(1)
 
     userJson = user.json()
-    empName = userJson[0]["name"]
+    empName = userJson["name"]
 
     url_TodoCompleted = url + 'todos?userId=' + empID + '&completed=true'
     t = requests.get(url_TodoCompleted)
@@ -36,4 +36,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):".format(
         empName, nTodoDone, nTodo))
     for i in range(nTodoDone):
-        print("     {}".format(tJson[i]["title"]))
+        print("     {}".format(tJson[i].get("title")))
