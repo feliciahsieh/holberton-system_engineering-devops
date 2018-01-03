@@ -10,7 +10,7 @@ if len(sys.argv) != 2:
 url = 'https://jsonplaceholder.typicode.com/'
 empID = sys.argv[1]
 
-urlUser = url + 'users?id=' + empID
+urlUser = url + 'users/' + empID
 urlTodos = url + 'todos?userId=' + empID
 
 user = requests.get(urlUser).json()
@@ -19,7 +19,7 @@ todos = requests.get(urlTodos).json()
 if (len(user) == 0):
     exit(1)
 
-username = user[0].get("username")
+username = user.get("username")
 
 fp = empID + ".csv"
 with open(fp, "w") as csvFile:
