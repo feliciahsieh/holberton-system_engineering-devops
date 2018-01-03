@@ -29,6 +29,7 @@ tot = requests.get(url_TodoTotal)
 totJson = tot.json()
 nTodo = len(totJson)
 
-print("Employee {} is done with tasks({}/{}):".format(empName, nTodoDone, nTodo))
+print("Employee {} is done with tasks({}/{}):".format(
+    empName, nTodoDone, nTodo))
 for i in range(nTodoDone):
     print("\t{}".format(tJson[i]["title"]))
