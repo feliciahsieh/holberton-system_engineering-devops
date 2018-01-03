@@ -34,8 +34,6 @@ for todo in todos:
     values.append(t)
     data[empID] = values
 
-print("DATA: " + str(data))
-
 fp = empID + ".csv"
 with open(fp, "w") as fp:
-    fp.write(str(data))
+    fp.write(json.dumps(data))
