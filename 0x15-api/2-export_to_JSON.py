@@ -1,39 +1,43 @@
 #!/usr/bin/python3
 """For a given employee ID, returns TODO list info as JSON format"""
-import collections
-import csv
-import json
-import sys
-import requests
 
-if len(sys.argv) != 2:
-    exit(1)
+if __name__ == "__main__":
+    """ __main__ """
 
-url = 'https://jsonplaceholder.typicode.com/'
-empID = sys.argv[1]
+    import collections
+    import csv
+    import json
+    import sys
+    import requests
 
-urlUser = url + 'users/' + empID
-urlTodos = url + 'todos?userId=' + empID
+    if len(sys.argv) != 2:
+        exit(1)
 
-user = requests.get(urlUser).json()
-todos = requests.get(urlTodos).json()
+    url = 'https://jsonplaceholder.typicode.com/'
+    empID = sys.argv[1]
 
-if (len(user) == 0):
-    exit(1)
+    urlUser = url + 'users/' + empID
+    urlTodos = url + 'todos?userId=' + empID
 
-username = user.get("username")
+    user = requests.get(urlUser).json()
+    todos = requests.get(urlTodos).json()
 
-data = collections.OrderedDict()
-values = []
+    if (len(user) == 0):
+        exit(1)
 
-for todo in todos:
-    t = collections.OrderedDict()
-    t["task"] = todo.get("title")
-    t["completed"] = todo.get("completed")
-    t["username"] = username
-    values.append(t)
-    data[empID] = values
+    username = user.get("username")
 
-fp = empID + ".csv"
-with open(fp, "w") as fp:
-    fp.write(json.dumps(data))
+    data = collections.OrderedDict()
+    values = []
+
+    for todo in todos:
+        t = collections.OrderedDict()
+        t["task"] = todo.get("title")
+        t["completed"] = todo.get("completed")
+        t["username"] = username
+        values.append(t)
+        data[empID] = values
+
+    fp = empID + ".csv"
+    with open(fp, "w") as fp:
+        fp.write(json.dumps(data))
