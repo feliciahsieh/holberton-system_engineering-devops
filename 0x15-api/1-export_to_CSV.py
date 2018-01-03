@@ -23,7 +23,7 @@ username = user[0].get("username")
 
 fp = empID + ".csv"
 with open(fp, "w") as csvFile:
+    csvWriter = csv.writer(csvFile, quoting=csv.QUOTE_ALL)
     for todo in todos:
-        csvWriter = csv.writer(csvFile, quoting=csv.QUOTE_ALL)
         csvWriter.writerow(
             [empID, username, todo.get("completed"), todo.get("title")])
