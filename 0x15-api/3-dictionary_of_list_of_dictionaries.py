@@ -14,22 +14,24 @@ url = 'https://jsonplaceholder.typicode.com/'
 urlUser = url + 'users/'
 urlTodos = url + 'todos/'
 
-user = requests.get(urlUser).json()
+users = requests.get(urlUser).json()
 todos = requests.get(urlTodos).json()
 
-if (len(user) == 0):
+if (len(users) == 0):
     exit(1)
 
 data = collections.OrderedDict()
 values = []
 
-for todo in todos:
-    t = collections.OrderedDict()
-    t["username"] = todo.get("username")
-    t["task"] = todo.get("title")
-    t["completed"] = todo.get("completed")
-    values.append(t)
-    data["1"] = values
+for user in users:
+    username = user.get("username")
+    for todo in todos:
+        t = collections.OrderedDict()
+        t["username"] = username
+        t["task"] = todo.get("title")
+        t["completed"] = todo.get("completed")
+        values.append(t)
+        data["1"] = values
 
 filename = "todo_all_employees.json"
 with open(filename, "w") as fp:
