@@ -82,6 +82,7 @@ git clone https://github.com/feliciahsieh/[Github project directory]
 19. [0x13-firewall](./0x13-firewall)
 20. [0x14-mysql](./0x14-mysql)
 21. [0x15-api](./0x15-api)
+22. [0x16-api_advanced](./0x16-api_advanced)
 
 ## Credits
 Work is owned and maintained by Felicia Hsieh ([@feliciahsiehsw](https://twitter.com/feliciahsiehsw)). A few projects were group projects, and joint ownership will be reflected in each respective project README.md file.
