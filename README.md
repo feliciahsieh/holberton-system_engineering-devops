@@ -16,6 +16,30 @@ Thanks for visiting my SysAdmin / SRE-type scripting projects. It is written in 
 ## About
 This repository contains various projects created while learning the System Admin or Site Reliability Engineer (SRE) skills.
 
+This repository contains projects on:
+1. **Linux/Command Line. The projects will cover:**
+ - How the shell works
+ - Navigating the file system
+ - Manipulating files
+ - I/O redirections, standard input, standard output, pipes, filters
+ - Permissions
+ - Job control
+ - Shell scripts
+2. **Infrastructure design & management**
+- Parsing
+- Advanced Log parsing
+- Advanced SSH
+- Setup a domain name Understanding DNS
+- Setup SSL certificate
+- Manage Web servers
+- Manage Load balancers
+- Continuous integration & deployment MySQL Master / Slave setup
+- Firewall management
+- Build tools for AWS, EC2, S3
+- Web infrastructure design
+- Monitor a web infrastructure
+- Web stack debugging
+
 ## Requirements
 * Ubuntu 14.04 LTS
 * python3 3.4.3
@@ -35,76 +59,6 @@ git clone https://github.com/feliciahsieh/[Github project directory]
 ```sh
 ./[executable file]
 ```
-
-Run a Python program at your shell prompt normally as directed.
-
-<img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" width="300">
-
-# Sysadmin & Devops
-
-<img src="https://68.media.tumblr.com/tumblr_lv9abt7VdM1qmt85zo1_500.gif" width="500px">
-
-## About
-We will learn to build web infrastructure similar to the . We will architecture scalable, reliable and secure system using web servers, load balancers, databases, firewall, caching and more. We will learn to automated your job, so that you can easily manage one server or hundreds of them.
-
-This repository contains projects on:
-
-1. **Linux/Command Line. The projects will cover:**
- - How the shell works
- - Navigating the file system
- - Manipulating files
- - I/O redirections, standard input, standard output, pipes, filters
- - Permissions
- - Job control
- - Shell scripts
-
-2. **Infrastructure design & management**
-- Parsing
-- Advanced Log parsing
-- Advanced SSH
-- Setup a domain name Understanding DNS
-- Setup SSL certificate
-- Manage Web servers
-- Manage Load balancers
-- Continuous integration & deployment MySQL Master / Slave setup
-- Firewall management
-- Build tools for AWS, EC2, S3
-- Web infrastructure design
-- Monitor a web infrastructure
-- Web stack debugging
-
-<img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" width="300">
-
-# Sysadmin & Devops
-
-<img src="https://68.media.tumblr.com/tumblr_lv9abt7VdM1qmt85zo1_500.gif" width="500px">
-
-## About
-We will learn to build web infrastructure similar to the tones powering Tech powerhouse like LinkedIn, Facebook and Google. We will architecture scalable, reliable and secure system using web servers, load balancers, databases, firewall, caching and more. We will learn to automated your job, so that you can easily manage one server or hundreds of them.
-
-This repository contains projects on:
-1. **Linux/Command Line. The projects will cover:**
- - How the shell works
- - Navigating the file system
- - Manipulating files
- - I/O redirections, standard input, standard output, pipes, filters
- - Permissions
- - Job control
- - Shell scripts
-2. **Infrastructure design & management**
-- Parsing
-- Advanced Log parsing
-- Advanced SSH
-- Setup a domain name Understanding DNS
-- Setup SSL certificate
-- Manage Web servers
-- Manage Load balancers
-- Continuous integration & deployment MySQL Master / Slave setup
-- Firewall management
-- Build tools for AWS, EC2, S3
-- Web infrastructure design
-- Monitor a web infrastructure
-- Web stack debugging
 
 ## Projects
 1. [0x00-shell_basics](./0x00-shell_basics)
