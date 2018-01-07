@@ -6,8 +6,7 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], params={}):
-    """Find hot article titles using recursion"""
-
+    """Find hot subreddit article titles using recursion"""
     payload = {}
     pp = pprint.PrettyPrinter(indent=2)
 
@@ -16,33 +15,28 @@ def recurse(subreddit, hot_list=[], params={}):
 
     headers = {
         'User-Agent': 'My User Agent 1.0',
-        'From': '214@holbertonschool.com'
+        'From': '214 at Holberton'
     }
-
     result = requests.get(url, headers=headers, params=params)
-
+    title = []
     if result.status_code == 200:
         result = result.json()
+        children = result.get('data').get('children')
+        nChildren = len(children)
+        for i in range(nChildren):
+            if children[i].get('data').get('title'):
+                title.append(children[i].get('data').get('title'))
+                hot_list.append(title)
+            else:
+                return
         after = result.get('data').get('after')
         if after is None:
-            children = result.get('data').get('children')
-            title = []
-            for i in range(100):
-                title.append(children[i].get('data').get('title'))
-                hot_list.append(title)
-                pp.pprint(hot_list)
             return hot_list
         else:
-            payload = {"after" : after}
+            payload = {"after": after}
             pp.pprint(payload)
             recurse(subreddit, hot_list, payload)
-
-            children = result.get('data').get('children')
-            title = []
-            for i in range(100):
-                title.append(children[i].get('data').get('title'))
-                hot_list.append(title)
-                pp.pprint(hot_list)
+            return hot_list
     else:
         print("None")
-        return
+        return hot_list
