@@ -9,7 +9,7 @@ def recurse(subreddit, hot_list=[], params={}):
     payload = {}
 
     baseURL = "https://www.reddit.com/r/"
-    url = baseURL + subreddit + "/hot/.json?limit=100"
+    url = baseURL + subreddit + "asdfasdkfjadslf/hot/.json?limit=100"
 
     headers = {
         'User-Agent': 'My User Agent 1.0',
@@ -35,5 +35,4 @@ def recurse(subreddit, hot_list=[], params={}):
             recurse(subreddit, hot_list, payload)
             return hot_list
     else:
-        print("None")
-        return hot_list
+        return None
