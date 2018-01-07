@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """2-recurse.py - Query Reddit API & find titles of all hot articles"""
 import json
-import pprint
 import requests
 
 
 def recurse(subreddit, hot_list=[], params={}):
     """Find hot subreddit article titles using recursion"""
     payload = {}
-    pp = pprint.PrettyPrinter(indent=2)
 
     baseURL = "https://www.reddit.com/r/"
     url = baseURL + subreddit + "/hot/.json?limit=100"
@@ -34,7 +32,6 @@ def recurse(subreddit, hot_list=[], params={}):
             return hot_list
         else:
             payload = {"after": after}
-            pp.pprint(payload)
             recurse(subreddit, hot_list, payload)
             return hot_list
     else:
