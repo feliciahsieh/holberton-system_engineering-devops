@@ -6,7 +6,6 @@ import requests
 
 def number_of_subscribers(subreddit):
     """Return the number of subscribers"""
-    count = 0
     baseURL = "https://www.reddit.com/r/"
     url = baseURL + subreddit + "/about/.json"
 
@@ -14,7 +13,9 @@ def number_of_subscribers(subreddit):
         'User-Agent': 'My User Agent 1.0',
         'From': '214@holbertonschool.com'
     }
-    result = requests.get(url, headers=headers).json()
-    if result.get('children') != None:
-        count = result['data']['subscribers']
-    return count
+    result = requests.get(url, headers=headers)
+    if result.status_code == 200:
+        result = result.json()
+        return result['data']['subscribers']
+    else:
+        return 0
