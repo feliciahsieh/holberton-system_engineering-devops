@@ -10,8 +10,9 @@ def number_of_subscribers(subreddit):
     baseURL = "https://www.reddit.com/r/"
     url = baseURL + subreddit + "/about/.json"
 
-    headers = { 'User-Agent': 'My User Agent 1.0',
-                'From': '214@holbertonschool.com'
+    headers = {
+        'User-Agent': 'My User Agent 1.0',
+        'From': '214@holbertonschool.com'
     }
     result = requests.get(url, headers=headers).json()
 
