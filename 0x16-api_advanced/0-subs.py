@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0-subs.py - Query the Reddit API and print # subscribers for a subreddit"""
+"""0-subs.py - Query Reddit API & find # subscribers"""
 import json
 import requests
 
