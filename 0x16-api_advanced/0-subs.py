@@ -15,6 +15,7 @@ def number_of_subscribers(subreddit):
         'From': '214@holbertonschool.com'
     }
     result = requests.get(url, headers=headers).json()
-    if result is not None:
+    print(result)
+    if result.get('children') != None:
         count = result['data']['subscribers']
     return count
