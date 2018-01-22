@@ -83,6 +83,9 @@ git clone https://github.com/feliciahsieh/[Github project directory]
 20. [0x14-mysql](./0x14-mysql)
 21. [0x15-api](./0x15-api)
 22. [0x16-api_advanced](./0x16-api_advanced)
+23. [0x17-web_stack_debugging_3](./0x17-web_stack_debugging_3)
+24. [0x18-webstack_monitoring](./0x18-webstack_monitoring)
+25. [0x19-postmortem](./0x19-postmortem)
 
 ## Credits
 Work is owned and maintained by Felicia Hsieh ([@feliciahsiehsw](https://twitter.com/feliciahsiehsw)). A few projects were group projects, and joint ownership will be reflected in each respective project README.md file.
