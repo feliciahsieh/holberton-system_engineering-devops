@@ -74,3 +74,5 @@ CORRECTIVE AND PREVENTATIVE MEASURES:
 -We are also suffering from extreme chocolate deprivation. Emergency French chocolate must be airlifted to me ASAP.
 -I'm considering writing a novel because this is a touchingly sad and eloquent story, worthy of the Blarney Stone.
 -[Update 1/24/18 5:08 pm, Andrew found the uninstall command and re-installed, but now nothing works. The saga continues ...]
+
+¯\_(ツ)_/¯
