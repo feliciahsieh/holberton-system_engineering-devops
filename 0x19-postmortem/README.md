@@ -65,14 +65,14 @@ CORRECTIVE AND PREVENTATIVE MEASURES:
 -Sumo Logic to handle graceful recovery if installation of Free version is Interrupted
 -Sumo Logic to provide explanation of Installation Process and where to find help.
 -Sumo Logic Customer Support was great, but wished it wasn’t necessary.
--Look at alternatives to Sumo Logic as a tool.
--Next time, I should have quit earlier. Time would have been better spent working on my Final Project. Call me stubborn.
+-Perhaps consider an alternative to Sumo Logic.
+-Next time, I should have quit earlier and worked on my Final Project.
 -Under pain of death, do not start Sumo Logic install unless I have an hour to babysit the tool.
--Reduce reimaging the iMacs and archive vagrants on all the machines. I wasn’t the only one that lost work and time.
+-Archive vagrants on all the machines before reimaging iMacs.
 -Need to buy Gremlin repellent.
 -Build a bar in the kitchen area. Cheers to that! (clink)
--We are also suffering from extreme chocolate deprivation. Emergency French chocolate must be airlifted to me ASAP.
+-We are also suffering from extreme chocolate deprivation. Emergency French chocolate must be airlifted ASAP.
 -I'm considering writing a novel because this is a touchingly sad and eloquent story, worthy of the Blarney Stone.
--[Update 1/24/18 5:08 pm, Andrew found the uninstall command and re-installed, but now nothing works. The saga continues ...]
+-[Update 1/25/18 5:08 am, After Andrew told me about the uninstall command and re-installed, it now works].
 
 ¯\_(ツ)_/¯
