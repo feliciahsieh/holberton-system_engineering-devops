@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -b1 | tr '\n '  ' ' > a.out |cat a.out | tr -d "[:space:]" ; echo -e
+cut -c1 | tr '\n '  ' ' > a.out |cat a.out | tr -d "[:space:]" ; echo -e
