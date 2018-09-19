@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -ne '$.%2 == 1 && print'
+cat -n | grep $'[13579]\t' | cut -f2
