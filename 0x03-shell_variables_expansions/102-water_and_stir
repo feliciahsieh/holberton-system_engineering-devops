@@ -1,8 +1,2 @@
 #!/bin/bash
-# water variable
-w=$(echo "$WATER" | tr 'water' '01234')
-w2="$(echo "ibase=5; obase=8; $w" | bc)"
-# stir variable
-s=$(echo "$STIR" | tr 'stir.' '01234')
-s2="$(echo "ibase=5; obase=8; $s" | bc)" #stir.
-printf "%o\n" $((8#$w2 + 8#$s2)) | tr '012345678' 'behlnort'
+printf "%o\n" $((5#$(echo "$WATER" | tr 'water' '01234') + 5#$(echo "$STIR" | tr 'stir.' '01234'))) | tr '012345678' 'behlnort'
