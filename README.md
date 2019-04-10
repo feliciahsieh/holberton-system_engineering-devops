@@ -1,4 +1,4 @@
-<img src="LaptopProgramming.jpg" width="300">
+<p align="center"><img src="LaptopProgramming.jpg" width="300"></p>
 
 # System engineering & DevOps
 
